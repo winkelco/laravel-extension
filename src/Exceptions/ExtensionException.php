@@ -1,6 +1,6 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Exceptions;
+namespace WinkelCo\LaravelExtension\Exceptions;
 
 use Exception;
 
