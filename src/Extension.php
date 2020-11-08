@@ -1,14 +1,14 @@
 <?php
 
-namespace Viandwi24\LaravelExtension;
+namespace WinkelCo\LaravelExtension;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\File;
-use Viandwi24\LaravelExtension\Exceptions\NotFoundExtensionException;
-use Viandwi24\LaravelExtension\Exceptions\ExtensionException;
-use Viandwi24\LaravelExtension\Exceptions\NotFoundExtensionConfigException;
-use Viandwi24\LaravelExtension\Exceptions\NotFoundExtensionGlobalConfigException;
-use Viandwi24\LaravelExtension\Extension\WrapperServiceProvider;
+use WinkelCo\LaravelExtension\Exceptions\NotFoundExtensionException;
+use WinkelCo\LaravelExtension\Exceptions\ExtensionException;
+use WinkelCo\LaravelExtension\Exceptions\NotFoundExtensionConfigException;
+use WinkelCo\LaravelExtension\Exceptions\NotFoundExtensionGlobalConfigException;
+use WinkelCo\LaravelExtension\Extension\WrapperServiceProvider;
 
 class Extension
 {
@@ -481,7 +481,7 @@ class Extension
     {
         $router = app('router');
         return $router->group([
-            'namespace' => '\Viandwi24\LaravelExtension\Controllers',
+            'namespace' => '\WinkelCo\LaravelExtension\Controllers',
             'prefix' => 'extension',
             'as' => 'extension.'
         ], function () use ($router) {
