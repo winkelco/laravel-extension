@@ -1,10 +1,10 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Commands;
+namespace WinkelCo\LaravelExtension\Commands;
 
 use Illuminate\Console\Command;
-use Viandwi24\LaravelExtension\Exceptions\ExtensionException;
-use Viandwi24\LaravelExtension\Facades\Extension;
+use WinkelCo\LaravelExtension\Exceptions\ExtensionException;
+use WinkelCo\LaravelExtension\Facades\Extension;
 
 class ExtensionEnableCommand extends Command
 {
