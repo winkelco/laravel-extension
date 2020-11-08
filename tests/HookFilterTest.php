@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use Viandwi24\LaravelExtension\Hook;
+use WinkelCo\LaravelExtension\Hook;
 use PHPUnit\Framework\TestCase;
 
 final class HookFilterTest extends TestCase
