@@ -1,10 +1,10 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Commands;
+namespace WinkelCo\LaravelExtension\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
-use Viandwi24\LaravelExtension\Facades\Extension;
+use WinkelCo\LaravelExtension\Facades\Extension;
 
 class ExtensionListCommand extends Command
 {
