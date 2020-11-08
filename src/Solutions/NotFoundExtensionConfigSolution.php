@@ -1,6 +1,6 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Solutions;
+namespace WinkelCo\LaravelExtension\Solutions;
 
 use Facade\IgnitionContracts\RunnableSolution;
 
@@ -18,7 +18,7 @@ class NotFoundExtensionConfigSolution implements RunnableSolution
 
     public function getDocumentationLinks(): array
     {
-        return ['Laravel Extension Docs' => 'https://www.github.com/viandwi24/laravel-extension'];
+        return ['Laravel Extension Docs' => 'https://www.github.com/winkelco/laravel-extension'];
     }
 
     public function getSolutionActionDescription(): string
