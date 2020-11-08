@@ -1,8 +1,8 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Support;
+namespace WinkelCo\LaravelExtension\Support;
 
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Hook;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
