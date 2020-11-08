@@ -1,6 +1,6 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Facades;
+namespace WinkelCo\LaravelExtension\Facades;
 
 class Hook extends \Illuminate\Support\Facades\Facade
 {
