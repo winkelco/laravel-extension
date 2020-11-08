@@ -1,6 +1,6 @@
 <?php
 
-namespace Viandwi24\LaravelExtension;
+namespace WinkelCo\LaravelExtension;
 
 use Illuminate\Support\Collection;
 
