@@ -1,9 +1,9 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Commands;
+namespace WinkelCo\LaravelExtension\Commands;
 
 use Illuminate\Console\Command;
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Hook;
 
 class HookListCommand extends Command
 {
