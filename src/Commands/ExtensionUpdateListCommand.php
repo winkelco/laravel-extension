@@ -1,6 +1,6 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Commands;
+namespace WinkelCo\LaravelExtension\Commands;
 
 use Extension;
 use Illuminate\Console\Command;
