@@ -1,8 +1,8 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Extension;
+namespace WinkelCo\LaravelExtension\Extension;
 
-use Viandwi24\LaravelExtension\Exceptions\NotFoundExtensionProviderException;
+use WinkelCo\LaravelExtension\Exceptions\NotFoundExtensionProviderException;
 
 class WrapperServiceProvider
 {
