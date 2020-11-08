@@ -1,11 +1,11 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Exceptions;
+namespace WinkelCo\LaravelExtension\Exceptions;
 
 use Exception;
 use Facade\IgnitionContracts\Solution;
 use Facade\IgnitionContracts\ProvidesSolution;
-use Viandwi24\LaravelExtension\Solutions\NotFoundExtensionConfigSolution;
+use WinkelCo\LaravelExtension\Solutions\NotFoundExtensionConfigSolution;
 
 class NotFoundExtensionConfigException extends Exception implements ProvidesSolution
 {
