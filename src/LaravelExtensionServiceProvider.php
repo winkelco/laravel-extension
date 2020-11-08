@@ -1,19 +1,19 @@
 <?php
 
-namespace Viandwi24\LaravelExtension;
+namespace WinkelCo\LaravelExtension;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Viandwi24\LaravelExtension\Facades\Hook;
-use Viandwi24\LaravelExtension\Facades\Extension;
-use Viandwi24\LaravelExtension\Commands\ExtensionInitCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionListCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionEnableCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionDisableCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionInspectCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionNewCommand;
-use Viandwi24\LaravelExtension\Commands\ExtensionUpdateListCommand;
-use Viandwi24\LaravelExtension\Commands\HookListCommand;
+use WinkelCo\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Extension;
+use WinkelCo\LaravelExtension\Commands\ExtensionInitCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionListCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionEnableCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionDisableCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionInspectCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionNewCommand;
+use WinkelCo\LaravelExtension\Commands\ExtensionUpdateListCommand;
+use WinkelCo\LaravelExtension\Commands\HookListCommand;
 
 class LaravelExtensionServiceProvider extends ServiceProvider
 {
@@ -93,13 +93,13 @@ class LaravelExtensionServiceProvider extends ServiceProvider
     {
         $this->app->bind('extension', function () {
             $config = $this->app['config']->get('extension');
-            return new \Viandwi24\LaravelExtension\Extension($config['path'], $config['debug']);
+            return new \WinkelCo\LaravelExtension\Extension($config['path'], $config['debug']);
         });
         $this->app->bind('hook', function () {
-            return new \Viandwi24\LaravelExtension\Hook;
+            return new \WinkelCo\LaravelExtension\Hook;
         });
         $this->app->bind('menu', function () {
-            return new \Viandwi24\LaravelExtension\Menu;
+            return new \WinkelCo\LaravelExtension\Menu;
         });
     }
 
@@ -154,14 +154,14 @@ class LaravelExtensionServiceProvider extends ServiceProvider
                 $name = $args[0];
                 $value = $args[1]; array_splice($args, 0, 2);
                 $args_str = (count($args) > 0) ? ", " . implode(', ', $args) : "";
-                $result = "<?php echo \Viandwi24\LaravelExtension\Facades\Hook::applyFilter({$name}, {$value}{$args_str}); ?>";
+                $result = "<?php echo \WinkelCo\LaravelExtension\Facades\Hook::applyFilter({$name}, {$value}{$args_str}); ?>";
             }
             return $result;
         });
 
         Blade::directive('endapplyfilter', function ($expression) {
             $result = "<?php \$value = ob_get_contents(); ob_end_clean(); ?>";
-            $result .= "<?php echo \Viandwi24\LaravelExtension\Facades\Hook::applyFilter(\$name, \$value); ?>";
+            $result .= "<?php echo \WinkelCo\LaravelExtension\Facades\Hook::applyFilter(\$name, \$value); ?>";
             return $result;
         });
     }
