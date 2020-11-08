@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Viandwi24\\LaravelExtension\\": "src/"
+            "WinkelCo\\LaravelExtension\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Viandwi24\\LaravelExtension\\Test\\": "tests/"
+            "WinkelCo\\LaravelExtension\\Test\\": "tests/"
         }
     },
     "scripts": {
@@ -34,11 +34,11 @@
     "extra": {
 	    "laravel": {
             "providers": [
-                "Viandwi24\\LaravelExtension\\LaravelExtensionServiceProvider"
+                "WinkelCo\\LaravelExtension\\LaravelExtensionServiceProvider"
             ],
             "aliases": {
-                "Extension": "Viandwi24\\LaravelExtension\\Facades\\Extension",
-                "Hook": "Viandwi24\\LaravelExtension\\Facades\\Hook"
+                "Extension": "WinkelCo\\LaravelExtension\\Facades\\Extension",
+                "Hook": "WinkelCo\\LaravelExtension\\Facades\\Hook"
             }
         }
     }
