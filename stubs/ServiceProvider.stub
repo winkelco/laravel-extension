@@ -2,7 +2,7 @@
 
 namespace {{providerNamespace}};
 
-use \Viandwi24\LaravelExtension\Support\ServiceProvider;
+use \WinkelCo\LaravelExtension\Support\ServiceProvider;
 
 class {{providerName}} extends ServiceProvider
 {
