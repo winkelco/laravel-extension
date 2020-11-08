@@ -1,7 +1,7 @@
 # Laravel Extension
 Plugin, Extension and Module System For Laravel. Inspirate from Wordpress Plugins.
 
-![screenshot preview](https://raw.githubusercontent.com/viandwi24/laravel-extension/master/resources/screenshot.png)
+![screenshot preview](https://raw.githubusercontent.com/winkelco/laravel-extension/master/resources/screenshot.png)
 
 # Table of contents
 <!--ts-->
@@ -24,20 +24,20 @@ Plugin, Extension and Module System For Laravel. Inspirate from Wordpress Plugin
 ## Installing
 Install from composer :
 ```
-composer require viandwi24/laravel-extension
+composer require winkelco/laravel-extension
 ```
 We make this package with Auto Discovery, but you can add manual :
 ```
 # service provider :
-Viandwi24\LaravelExtension\LaravelExtensionServiceProvider::class
+WinkelCo\LaravelExtension\LaravelExtensionServiceProvider::class
 
 # aliases
-"Extension" => Viandwi24\LaravelExtension\Facades\Extension::class,
-"Hook" => Viandwi24\LaravelExtension\Facades\Hook::class
+"Extension" => WinkelCo\LaravelExtension\Facades\Extension::class,
+"Hook" => WinkelCo\LaravelExtension\Facades\Hook::class
 ```
 Publish Config :
 ```
-php artisan vendor:publish --provider="Viandwi24\LaravelExtension\LaravelExtensionServiceProvider"
+php artisan vendor:publish --provider="WinkelCo\LaravelExtension\LaravelExtensionServiceProvider"
 ```
 Added Namespace To Your Composer : (edit your laravel `composer.json`)
 ```
@@ -60,7 +60,7 @@ php artisan extension:init
 ## Extension Management Page
 For a simple Extension management page, added this route to your rourtes `routes/web.php` :
 ```
-use Viandwi24\LaravelExtension\Facades\Extension;
+use WinkelCo\LaravelExtension\Facades\Extension;
 
 Extension::routes();
 ```
@@ -158,8 +158,8 @@ ada pada `app\Extension`. berikut panduan singkat cara pembuatan extension :
     "version": "1.0.0",
     "provider": "MyPluginServiceProvider",
     "author": {
-        "name": "viandwi24",
-        "site": "https://github.com/viandwi24"
+        "name": "winkelco",
+        "site": "https://github.com/winkelco"
     }
 }
 ```
@@ -169,7 +169,7 @@ ada pada `app\Extension`. berikut panduan singkat cara pembuatan extension :
 
 namespace Extension\MyPlugin;
 
-use Viandwi24\LaravelExtension\Support\ServiceProvider;
+use WinkelCo\LaravelExtension\Support\ServiceProvider;
 
 class MyPluginServiceProvider extends ServiceProvider
 {
@@ -231,7 +231,7 @@ Hook::runAction(string $name)
   
 For Example, you can make action hook name "save_post", and this action can make many action callback
 ```
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Hook;
 use App\Models\Post;
 
 Hook::addAction('extension_name', 'save_post', function ($title) {
@@ -245,7 +245,7 @@ Hook::addAction('another_extension', 'save_post', function ($title) {
   
 And You Can Run :
 ```
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Hook;
 
 $title = "Example Post";
 Hook::runAction('save_post', $title);
@@ -263,7 +263,7 @@ $result = Hook::applyFilter(string $name, $value, ...$params)
   
 For example, i make 2 function for modification a data `$title` :
 ```
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Hook;
 
 Hook::addFilter('extension_name', 'save_post_params', function ($title) {
     return "a {$title}.";
@@ -284,7 +284,7 @@ $result = Hook::applyFilter('save_post_params', $title);
 This package include a simple menu builder, for make dynamic menu in your project,  
 this is a example :
 ```
-use Viandwi24\LaravelExtension\Facades\Menu;
+use WinkelCo\LaravelExtension\Facades\Menu;
 
 Menu::add('admin.navbar', 'Dashboard', url('/'));
 Menu::add('admin.navbar', 'Extension', url('/extension'));
@@ -395,5 +395,5 @@ And then, final result html is :
 
 ## License
 The MIT License (MIT). Please see
-<a href="https://github.com/viandwi24/laravel-extension/blob/master/LICENSE.md">License File</a>
+<a href="https://github.com/winkelco/laravel-extension/blob/master/LICENSE.md">License File</a>
 for more information.
