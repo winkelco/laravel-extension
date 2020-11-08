@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use Viandwi24\LaravelExtension\Menu;
+use WinkelCo\LaravelExtension\Menu;
 
 final class MenuBuilderTest extends TestCase
 {
