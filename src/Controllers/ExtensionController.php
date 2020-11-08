@@ -1,12 +1,12 @@
 <?php
 
-namespace Viandwi24\LaravelExtension\Controllers;
+namespace WinkelCo\LaravelExtension\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Viandwi24\LaravelExtension\Facades\Extension;
-use Viandwi24\LaravelExtension\Facades\Hook;
+use WinkelCo\LaravelExtension\Facades\Extension;
+use WinkelCo\LaravelExtension\Facades\Hook;
 
 class ExtensionController extends Controller
 {
