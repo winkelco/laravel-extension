@@ -1,9 +1,9 @@
 <?php
 
-namespace Viandwi24\LaravelExtension;
+namespace WinkelCo\LaravelExtension;
 
 use Illuminate\Support\Collection;
-use Viandwi24\LaravelExtension\Exceptions\ExtensionException;
+use WinkelCo\LaravelExtension\Exceptions\ExtensionException;
 
 class Hook
 {
