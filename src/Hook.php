@@ -88,6 +88,11 @@ class Hook
         // param
         $args = func_get_args();
         unset($args[0]);
+        
+        // validate if exists
+        if(!isset($this->actions[$name])){
+            return false;
+        }
 
         // search action by name
         $actions = new Collection($this->actions[$name]);
