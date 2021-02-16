@@ -7,8 +7,8 @@ use WinkelCo\LaravelExtension\Exceptions\ExtensionException;
 
 class Hook
 {
-    private array $actions = [];
-    private array $filters = [];
+    private $actions = [];
+    private $filters = [];
 
     /**
      * Add Action
