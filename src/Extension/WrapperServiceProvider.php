@@ -6,10 +6,10 @@ use WinkelCo\LaravelExtension\Exceptions\NotFoundExtensionProviderException;
 
 class WrapperServiceProvider
 {
-    public string $extension;
-    public string $path;
-    public string $provider_file;
-    public string $provider_file_path;
+    public $extension;
+    public $path;
+    public $provider_file;
+    public $provider_file_path;
     public $service_provider;
     public $provider;
 
