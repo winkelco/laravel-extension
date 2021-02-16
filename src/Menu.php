@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 
 class Menu
 {
-    protected array $menu = [];
+    protected $menu = [];
 
     /**
      * Add item mene
