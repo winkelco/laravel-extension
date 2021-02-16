@@ -12,12 +12,12 @@ use WinkelCo\LaravelExtension\Extension\WrapperServiceProvider;
 
 class Extension
 {
-    private string $path = '';
-    private bool $debug = false;
-    private array $config = [];
-    private array $loaded = [];
-    private array $registered = [];
-    private array $booted = [];
+    private $path = '';
+    private $debug = false;
+    private $config = [];
+    private $loaded = [];
+    private $registered = [];
+    private $booted = [];
 
     /**
      * Constructor
