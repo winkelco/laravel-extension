@@ -29,7 +29,7 @@ class LaravelExtensionServiceProvider extends ServiceProvider
     public function register()
     {
         // 
-        define('HOOK_SYSTEM_PRIORITY', 15);
+        //define('HOOK_SYSTEM_PRIORITY', 15);
 
         // config
         $this->publishConfig();
